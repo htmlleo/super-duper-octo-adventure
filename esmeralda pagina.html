@@ -1,0 +1,142 @@
+
+leonardo estevao alves
+13:35 (há 3 minutos)
+para mim
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Esmeralda company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .color-picker {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function changeBackgroundColor() {
+            var color = document.getElementById('colorPicker').value;
+            document.body.style.backgroundColor = color;
+        }
+
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            document.getElementById('time').innerHTML = hours + ':' + minutes + ':' + seconds;
+        }
+
+        setInterval(updateTime, 1000);
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Esmeralda company</h1>
+    </div>
+
+    <div class="container">
+        <h2>Login</h2>
+        <form action="#" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Login" class="button">
+        </form>
+
+        <h2>Email</h2>
+        <form action="#" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message" required></textarea><br><br>
+
+            <input type="submit" value="Send" class="button">
+        </form>
+
+        <div class="color-picker">
+            <h2 > Hey 😊 Deseja deixar a pagina com sua cor favorita ?
+             clique abaixo!</h2>
+            <input type="color" id="colorPicker">
+            <button onclick="changeBackgroundColor()" class="button">Apply Color</button>
+        </div>
+
+        <h2>horário oficial de Brasília</h2>
+        <div id="time"></div>
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Léo Tech</title>
+    <style>
+        /* Estilos CSS para os botões de emoji */
+        .emoji-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        .emoji-button:focus {
+            outline: none;
+        }
+
+        .emoji-count {
+            display: inline-block;
+            margin-left: 5px;
+        }
+    </style>
+    <script>
+        // Função para tratar o clique no botão de emoji
+        function handleEmojiClick(emoji) {
+            var emojiCount = document.getElementById(emoji + '-count');
+            emojiCount.innerHTML = parseInt(emojiCount.innerHTML) + 1;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button class="emoji-button" onclick="handleEmojiClick('like')">&#128077;</button>
+        <span id="like-count" class="emoji-count">0</span>
+
+        <button class="emoji-button" onclick="handleEmojiClick('force')">&#128170;</button>
+        <span id="force-count" class="emoji-count">0</span>
+
+        <button class="emoji-button" onclick="handleEmojiClick('haha')">&#128514;</button>
+        <span id="haha-count" class="emoji-count">0</span>
+
+        <button class="emoji-button" onclick="handleEmojiClick('uau')">&#128525;</button>
+        <span id="uau-count" class="emoji-count">0</span>
+
+    </div>
+</body>
+</html>
